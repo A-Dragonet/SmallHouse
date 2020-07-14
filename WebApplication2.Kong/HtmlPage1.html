@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <!--
+        <form action="/Home/Index" method="post"></form>
+        <form action="/Home/Index" enctype="multipart/form-data" method="post">
+            <input type="file" name="file" value="" />
+            <input type="submit" value="上传" />
+        </form>
+        <a href="/Default/FileDownload/">下载</a>
+    -->
+
+    <form action="/Home/PostData" method="post">
+        <input type="text" name="loginname" />
+        <button>get提交</button>
+    </form>
+
+    <!--上传文件一定要添加enctype="multipart/form-data"-->
+    <form action="/Home/FileData" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" />
+        <button>文件提交</button>
+    </form>
+
+    <form action="/Home/SessionData" method="post">
+        <input type="text" name="user"  />
+        <button>会话提交</button>
+    </form>
+</body>
+</html>
